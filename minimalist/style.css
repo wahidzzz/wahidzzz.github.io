@@ -60,6 +60,12 @@ body {
   gap: 1.5rem;
   font-size: 0.85rem;
   font-weight: 500;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg);
+  z-index: 1000;
+  padding: 1.5rem 0;
+  margin-top: -1.5rem;
 }
 
 .header-links a {
