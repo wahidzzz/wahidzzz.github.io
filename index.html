@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wahid Shaikh &mdash; Senior Software Engineer</title>
+  <!-- Prevent FOUC -->
+  <style>
+    body { background-color: #030305; margin: 0; }
+    #preloader { position: fixed; inset: 0; background: #030305; z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #ff2d55; font-family: "JetBrains Mono", monospace; }
+    .preloader-bar { width: 200px; height: 2px; background: rgba(255,255,255,0.1); margin-top: 1rem; position: relative; overflow: hidden; }
+    .preloader-bar-fill { height: 100%; background: #ff2d55; width: 0%; transition: width 0.1s; }
+    #preloader.hidden { opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
+  </style>
+  <meta name="description" content="Portfolio of Wahid Shaikh — Senior Software Engineer building AI systems, scalable platforms, and open-source tools." />
+  <meta property="og:title" content="Wahid Shaikh — Engineer · Builder · Architect" />
+  <meta property="og:description" content="Senior Software Engineer building the future with AI, code, and relentless curiosity." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Instrument+Serif&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='28' font-size='28'%3E⚡%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-glitch" data-text="WAHID.">WAHID.</div>
+      <div class="preloader-sub">ENGINEER · BUILDER · ARCHITECT</div>
+      <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- CSS BACKGROUND (0% FREEZE) -->
+  <div id="css-background">
+    <div class="ambient-glow"></div>
+    <div class="css-grid"></div>
+  </div>
+
+  <!-- CURSOR -->
+  <div id="custom-cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <div class="nav-logo">
+      <span class="logo-accent">[</span>W<span class="logo-accent">]</span>
+    </div>
+    <div class="nav-links">
+      <a href="#hero" class="nav-link active" data-section="hero">00</a>
+      <a href="#about" class="nav-link" data-section="about">01</a>
+      <a href="#journey" class="nav-link" data-section="journey">02</a>
+      <a href="#work" class="nav-link" data-section="work">03</a>
+      <a href="#contact" class="nav-link" data-section="contact">04</a>
+    </div>
+    <div class="nav-social">
+      <a href="https://github.com/wahidzzz" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+      <a href="https://www.linkedin.com/in/wahidzzz/" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a>
+    </div>
+  </nav>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"></div>
+
+  <main>
+
+    <!-- ==================== HERO ==================== -->
+    <section id="hero">
+      <div class="hero-left">
+        <div class="hero-tag">
+          <span class="tag-dot"></span>
+          <span>SENIOR SOFTWARE ENGINEER</span>
+        </div>
+        <h1 class="hero-name">
+          <span class="name-line"><span class="name-serif">Wahid</span></span>
+          <span class="name-line"><span class="name-grotesk">SHAIKH</span><span class="name-dot">.</span></span>
+        </h1>
+        <p class="hero-sub">I build <em>things that think</em> — AI systems, scalable platforms, and developer tools. Currently engineering solutions in stealth.</p>
+        <div class="hero-ctas">
+          <a href="#work" class="btn-primary hero-btn" id="cta-work" style="border-radius:0; box-shadow: 6px 6px 0 var(--red); background: #000; color: var(--red); border: 2px solid var(--red);">SEE MY WORK <span class="arrow">↗</span></a>
+          <a href="#contact" class="btn-primary" id="cta-contact" style="background:#fff; color:#000; border:3px dotted #000; border-radius:0; font-weight:900; box-shadow: -6px 6px 0 rgba(255,255,255,0.8);">LET'S TALK</a>
+          <a href="/wahid-shaikh-resume-full-stack.pdf" download class="btn-ghost" id="cta-resume" style="border: 2px dashed var(--red); color: var(--red); border-radius: 0; background: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,45,85,0.1) 5px, rgba(255,45,85,0.1) 10px);">RESUME <span class="arrow">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-meta">
+          <div class="meta-item hover-mumbai-container">
+            <span class="meta-label">BASED IN</span>
+            <span class="meta-value hover-mumbai" style="cursor:none;">MUMBAI, IN <span class="hover-icon">✦</span></span>
+            <img src="/images/mumbai_skyline_1777064091837.png" alt="Mumbai" class="mumbai-tooltip">
+          </div>
+          <div class="meta-item"><span class="meta-label">STATUS</span><span class="meta-value"><span class="status-dot"></span>BUILDING IN STEALTH</span></div>
+          <div class="meta-item"><span class="meta-label">FOCUS</span><span class="meta-value">AI · DISTRIBUTED SYSTEMS</span></div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span>SCROLL TO EXPLORE</span>
+      </div>
+    </section>
+
+    <!-- ==================== MARQUEE ==================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>REACT</span><span class="sep">✦</span>
+        <span>NEXT.JS</span><span class="sep">✦</span>
+        <span>NODE.JS</span><span class="sep">✦</span>
+        <span>TYPESCRIPT</span><span class="sep">✦</span>
+        <span>PYTHON</span><span class="sep">✦</span>
+        <span>AWS</span><span class="sep">✦</span>
+        <span>POSTGRESQL</span><span class="sep">✦</span>
+        <span>RAG</span><span class="sep">✦</span>
+        <span>LLM</span><span class="sep">✦</span>
+        <span>DOCKER</span><span class="sep">✦</span>
+        <span>GO</span><span class="sep">✦</span>
+        <span>RUST</span><span class="sep">✦</span>
+        <span>REDIS</span><span class="sep">✦</span>
+        <span>GRAPHQL</span><span class="sep">✦</span>
+        <span>REACT</span><span class="sep">✦</span>
+        <span>NEXT.JS</span><span class="sep">✦</span>
+        <span>NODE.JS</span><span class="sep">✦</span>
+        <span>TYPESCRIPT</span><span class="sep">✦</span>
+        <span>PYTHON</span><span class="sep">✦</span>
+        <span>AWS</span><span class="sep">✦</span>
+        <span>POSTGRESQL</span><span class="sep">✦</span>
+        <span>RAG</span><span class="sep">✦</span>
+        <span>LLM</span><span class="sep">✦</span>
+        <span>DOCKER</span><span class="sep">✦</span>
+        <span>GO</span><span class="sep">✦</span>
+        <span>RUST</span><span class="sep">✦</span>
+      </div>
+    </div>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about">
+      <span class="section-num" style="display:block; text-align:center; font-size:1.2rem; margin-bottom:5rem; font-family:var(--font-m); color:var(--red);">01 // ARCHITECT & BUILDER</span>
+      
+      <div class="about-massive-text">
+        <p class="reveal-text">
+          I am a Senior Software Engineer with over a decade of experience architecting complex, distributed systems. From leading enterprise platforms to engineering the future of Multi-Agent AI, I specialize in building highly scalable, fault-tolerant infrastructure that drives real impact.
+        </p>
+      </div>
+
+      <div class="about-bento-stats reveal">
+        <div class="stat-box">
+          <h3>10+</h3>
+          <span>Years Engineering</span>
+        </div>
+        <div class="stat-box">
+          <h3 class="pop">AI</h3>
+          <span>Agentic Systems</span>
+        </div>
+        <div class="stat-box">
+          <h3>Arch</h3>
+          <span>Distributed Scale</span>
+        </div>
+        <div class="stat-box">
+          <h3>OSS</h3>
+          <span>Active Contributor</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BIG TEXT BREAKER ==================== -->
+    <div class="massive-breaker reveal">
+      <div class="breaker-word">CONSULTING<span class="dot-accent">.</span></div>
+      <div class="breaker-word">MENTORSHIP<span class="dot-accent">.</span></div>
+      <div class="breaker-word">SPEAKER<span class="dot-accent">.</span></div>
+    </div>
+
+
+
+    <!-- ==================== JOURNEY ==================== -->
+    <section id="journey">
+      <div class="journey-header">
+        <span class="section-num">02</span>
+        <h2>THE JOURNEY<span class="dot-accent">.</span></h2>
+        <p class="journey-sub">A decade of building, leading, and shipping.</p>
+      </div>
+
+      <div class="journey-cards">
+        <article class="j-card j-card-now">
+          <div class="j-year">NOW</div>
+          <div class="j-body">
+            <h3>Senior Software Engineer</h3>
+            <p class="j-company">Confidential / Stealth</p>
+            <p class="j-desc">Currently engineering next-generation Multi-Agent AI systems and scalable platforms for a corporate organization. Specific details are under wraps.</p>
+          </div>
+          <div class="j-accent-bar"></div>
+        </article>
+
+        <article class="j-card">
+          <div class="j-year">2023<br><span class="j-yr-sm">—2025</span></div>
+          <div class="j-body">
+            <h3>Senior Software Engineer</h3>
+            <p class="j-company">Crimson Interactive · Mumbai</p>
+            <p class="j-desc">Led frontend enterprise B2B platforms. Slashed Core Web Vitals by <strong>40%</strong>, cut AWS costs by <strong>30%</strong>, and boosted developer productivity by <strong>50%</strong> through CI/CD automation.</p>
+            <div class="j-impact">
+              <div class="j-stat"><span class="j-stat-num">40%</span><span class="j-stat-label">CWV IMPROVEMENT</span></div>
+              <div class="j-stat"><span class="j-stat-num">30%</span><span class="j-stat-label">AWS COST CUT</span></div>
+              <div class="j-stat"><span class="j-stat-num">50%</span><span class="j-stat-label">DX BOOST</span></div>
+            </div>
+          </div>
+          <div class="j-accent-bar"></div>
+        </article>
+
+        <article class="j-card">
+          <div class="j-year">2022<br><span class="j-yr-sm">—2023</span></div>
+          <div class="j-body">
+            <h3>Team Lead / Senior Frontend</h3>
+            <p class="j-company">BinaryVeda · Mumbai</p>
+            <p class="j-desc">Led 5 engineers shipping 10+ production apps. Designed reusable React + TypeScript architectures. Reduced bug rates by <strong>45%</strong>. Delivered multi-tenant SaaS for enterprise clients.</p>
+          </div>
+          <div class="j-accent-bar"></div>
+        </article>
+
+        <article class="j-card">
+          <div class="j-year">2021<br><span class="j-yr-sm">—2022</span></div>
+          <div class="j-body">
+            <h3>Senior Frontend Developer</h3>
+            <p class="j-company">MiceWerkz · Singapore (Remote)</p>
+            <p class="j-desc">Built core frontend for a travel platform at 5,000+ MAUs. Increased engagement by <strong>25%</strong>. Implemented real-time media with WebRTC.</p>
+          </div>
+          <div class="j-accent-bar"></div>
+        </article>
+
+        <article class="j-card">
+          <div class="j-year">2016<br><span class="j-yr-sm">—2021</span></div>
+          <div class="j-body">
+            <h3>Full-Stack Developer</h3>
+            <p class="j-company">Webxera · Mumbai</p>
+            <p class="j-desc">Where it all began. 10+ full-stack apps. Backend services handling 100K+ req/day. Schemas across PostgreSQL and MongoDB. Five years of pure building.</p>
+          </div>
+          <div class="j-accent-bar"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== CREATIVE CAROUSEL ==================== -->
+    <section class="creative-carousel reveal">
+      <div class="carousel-track text-carousel-track">
+        <div class="carousel-slide text-slide">MULTI-AGENT</div>
+        <div class="carousel-slide text-slide">DISTRIBUTED</div>
+        <div class="carousel-slide text-slide">HIGH PERFORMANCE</div>
+        <div class="carousel-slide text-slide">STEALTH</div>
+        <!-- Duplicate for infinite scroll -->
+        <div class="carousel-slide text-slide">MULTI-AGENT</div>
+        <div class="carousel-slide text-slide">DISTRIBUTED</div>
+        <div class="carousel-slide text-slide">HIGH PERFORMANCE</div>
+        <div class="carousel-slide text-slide">STEALTH</div>
+      </div>
+    </section>
+
+
+    <!-- ==================== WORK / PROJECTS (HORIZONTAL SCROLL) ==================== -->
+    <section id="work">
+      <div class="work-sticky-container">
+        <div class="work-intro">
+          <h2 class="section-title">SELECTED WORK<span class="dot-accent">.</span></h2>
+          <p class="section-subtitle">Scroll to explore.</p>
+        </div>
+        <div class="work-horizontal-track">
+          
+          <!-- PROJECT 1 -->
+          <article class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-number">01</span>
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="GitHub"><span class="icon">GH</span></a>
+                  <a href="#" class="project-link" aria-label="Live Demo"><span class="icon">↗</span></a>
+                </div>
+              </div>
+              <h3 class="project-title">Strux CMS</h3>
+              <p class="project-desc">A high-performance headless CMS prioritizing extreme developer experience, extensible data models, and type-safe API delivery. Engineered from the ground up for modern JS frameworks.</p>
+              <div class="project-tech-list">
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">GraphQL</span>
+              </div>
+            </div>
+            <div class="project-visual">
+              <div class="visual-placeholder"><span>STRUX_CORE_V1</span></div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 -->
+          <article class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-number">02</span>
+                <div class="project-links">
+                  <span class="confidential-badge">CONFIDENTIAL</span>
+                </div>
+              </div>
+              <h3 class="project-title">Multi-Agent AI System</h3>
+              <p class="project-desc">Currently architecting a scalable, distributed multi-agent artificial intelligence system for my organization. Designed to handle complex, asynchronous reasoning tasks at scale. Details are confidential.</p>
+              <div class="project-tech-list">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">LLMs</span>
+                <span class="tech-tag">Distributed Systems</span>
+                <span class="tech-tag">Agents</span>
+                <span class="tech-tag">Vector DB</span>
+              </div>
+            </div>
+            <div class="project-visual">
+              <div class="visual-placeholder neural-bg"><span>AI_ORCHESTRATOR</span></div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-number">03</span>
+                <div class="project-links">
+                  <span class="confidential-badge">CONTRIBUTOR · AWS LABS</span>
+                  <a href="#" class="project-link" aria-label="GitHub"><span class="icon">GH</span></a>
+                </div>
+              </div>
+              <h3 class="project-title">CLI Agent Orchestrator</h3>
+              <p class="project-desc">Open-source contribution to AWS Labs. Enhanced the orchestration engine for managing multiple CLI AI agents. Implemented critical idle detection mechanisms and robust testing for Copilot CLI integrations.</p>
+              <div class="project-tech-list">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">pytest</span>
+                <span class="tech-tag">tmux</span>
+                <span class="tech-tag">OSS Contribution</span>
+              </div>
+            </div>
+            <div class="project-visual">
+              <div class="visual-placeholder"><span>CLI_ENGINE_V2</span></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BEYOND CODE (CONSULTING) ==================== -->
+    <section id="consulting">
+      <div class="consulting-bg-text">MENTORSHIP</div>
+      <div class="consulting-header reveal">
+        <h2 class="section-title">BEYOND CODE<span class="dot-accent">.</span></h2>
+        <p class="section-subtitle">Level up your engineering career.</p>
+      </div>
+      <div class="consulting-grid">
+        <div class="consulting-card reveal" style="--delay: 0.1s">
+          <div class="consulting-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <h3>Tech Consulting</h3>
+          <p>Architecting scalable solutions and distributed systems for enterprise teams. System design and performance optimization.</p>
+        </div>
+        <div class="consulting-card reveal" style="--delay: 0.2s">
+          <div class="consulting-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3>Mentorship</h3>
+          <p>Guiding junior to mid-level engineers. Level up your architecture, clean code, and advanced full-stack skills.</p>
+        </div>
+        <div class="consulting-card reveal" style="--delay: 0.3s">
+          <div class="consulting-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+          </div>
+          <h3>Tech Talks</h3>
+          <p>Speaking on Multi-Agent Systems, High-Performance Frontends, and navigating stealth engineering roles.</p>
+        </div>
+      </div>
+      <div class="consulting-cta reveal">
+        <a href="#contact" class="btn-primary" style="border-radius: 30px 0 30px 0; border: 2px solid var(--red); box-shadow: 6px -6px 0 var(--red); background: transparent; color: var(--text);">REQUEST GUIDANCE <span class="arrow">↗</span></a>
+      </div>
+    </section>
+
+
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact">
+      <div class="contact-header">
+        <span class="section-num">04</span>
+        <h2>LET'S BUILD<span class="dot-accent">.</span></h2>
+        <p class="contact-sub">I'm open to conversations about AI, architecture, system design, and building things that matter.</p>
+      </div>
+
+      <div class="contact-bento">
+        <a href="mailto:wahidxzzz@gmail.com" class="bento-card bento-email" id="contact-email">
+          <span class="bento-label">EMAIL</span>
+          <span class="bento-value">wahidxzzz@gmail.com</span>
+          <span class="bento-arrow">↗</span>
+        </a>
+        <a href="https://github.com/wahidzzz" target="_blank" class="bento-card bento-gh" id="contact-github">
+          <span class="bento-label">GITHUB</span>
+          <span class="bento-value">@wahidzzz</span>
+          <span class="bento-repos">57 repos</span>
+          <span class="bento-arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/wahidzzz/" target="_blank" class="bento-card bento-li" id="contact-linkedin">
+          <span class="bento-label">LINKEDIN</span>
+          <span class="bento-value">in/wahidzzz</span>
+          <span class="bento-repos">500+ connections</span>
+          <span class="bento-arrow">↗</span>
+        </a>
+        <a href="https://stackoverflow.com/users/13705454/wahid-shaikh" target="_blank" class="bento-card bento-so" id="contact-so">
+          <span class="bento-label">STACK OVERFLOW</span>
+          <span class="bento-value">wahid-shaikh</span>
+          <span class="bento-arrow">↗</span>
+        </a>
+        <div class="bento-card bento-location">
+          <span class="bento-label">LOCATION</span>
+          <span class="bento-value">Mumbai, India</span>
+          <span class="bento-repos">UTC+05:30</span>
+        </div>
+        <div class="bento-card bento-status">
+          <span class="status-dot-big"></span>
+          <span class="bento-label">STATUS</span>
+          <span class="bento-value">Available</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="main-footer">
+    <span>© 2026 WAHID SHAIKH</span>
+    <span>DESIGNED & BUILT WITH OBSESSION</span>
+    <span>MUMBAI, INDIA</span>
+  </footer>
+  <!-- ==================== INTERACTIVE MINIGAME ==================== -->
+  <section id="minigame-section">
+    <div class="minigame-wrapper reveal">
+      <p style="text-align:center;color:var(--muted);margin-bottom:2rem;font-size:1.1rem;font-family:var(--font-m);">Since you are here you are probably bold or like my profile.<br>Talk to me or play game.</p>
+      <h2 class="bg-huge-text">PLAY</h2>
+      <div class="minigame-container">
+        <canvas id="game-canvas"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
