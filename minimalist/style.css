@@ -1,9 +1,9 @@
 :root {
-  --bg: #F9F9F7;
+  --bg: #FAFAF8;
   --text: #1C1C1C;
-  --text-muted: #616161;
-  --border: #E5E5E0;
-  --accent: #D33636; /* Subtle dark red accent */
+  --text-muted: #555555;
+  --border: #E8E8E3;
+  --accent: #C42323; /* Crisp red */
 }
 
 * {
@@ -22,10 +22,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .container {
   max-width: 720px;
   margin: 0 auto;
   padding: 6rem 2rem;
+  animation: fadeUp 0.8s ease-out forwards;
 }
 
 .header {
@@ -35,7 +41,7 @@ body {
 .name {
   font-family: 'Playfair Display', serif;
   font-size: 2.8rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 0.3rem;
   color: #000;
@@ -100,14 +106,14 @@ body {
   font-size: 1.1rem;
   line-height: 1.7;
   color: var(--text);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .bio em {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   color: #000;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 /* Experience */
@@ -133,7 +139,7 @@ body {
 }
 
 .exp-role {
-  font-weight: 500;
+  font-weight: 600;
   color: #000;
   font-size: 1.05rem;
 }
@@ -167,7 +173,7 @@ body {
 
 .proj-title {
   font-family: 'Playfair Display', serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.3rem;
   color: #000;
 }
@@ -180,7 +186,7 @@ body {
   background: var(--border);
   border-radius: 4px;
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .proj-item p {
@@ -193,7 +199,7 @@ body {
 .proj-tech {
   font-family: monospace;
   font-size: 0.8rem !important;
-  color: #999 !important;
+  color: #888 !important;
 }
 
 /* Footer */
@@ -214,10 +220,45 @@ body {
 .return-link {
   color: var(--text);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.2s;
 }
 
 .return-link:hover {
   color: var(--accent);
+}
+
+/* IMMERSIVE CTA (Whimsical & Imperfect Light Mode) */
+.floating-immersive-cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: auto;
+  height: auto;
+  padding: 0.8rem 1.4rem;
+  background: #fff;
+  border: 2px dashed #000;
+  border-radius: 25px 8px 20px 5px / 10px 25px 8px 20px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-decoration: none;
+  z-index: 9999;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 4px 4px 0 #000;
+  transform: rotate(-3deg);
+}
+
+.floating-immersive-cta:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 8px 25px 5px 20px / 25px 10px 20px 8px;
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: -4px 6px 0 #000;
 }
