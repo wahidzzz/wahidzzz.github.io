@@ -1,9 +1,10 @@
 :root {
-  --bg: #FAFAF8;
-  --text: #1C1C1C;
-  --text-muted: #555555;
-  --border: #E8E8E3;
-  --accent: #C42323; /* Crisp red */
+  --bg: #FCFCFA;
+  --text: #222222;
+  --text-muted: #6B6B6B;
+  --text-light: #999999;
+  --border: #EEEEEE;
+  --accent: #000000;
 }
 
 * {
@@ -23,7 +24,7 @@ body {
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -31,7 +32,7 @@ body {
   max-width: 720px;
   margin: 0 auto;
   padding: 6rem 2rem;
-  animation: fadeUp 0.8s ease-out forwards;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .header {
@@ -40,42 +41,39 @@ body {
 
 .name {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.3rem;
-  color: #000;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+  color: #111;
 }
 
 .title {
   color: var(--text-muted);
-  font-size: 1.15rem;
-  font-weight: 300;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.01em;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
 }
 
 .header-links {
   display: flex;
-  gap: 1.2rem;
-  font-size: 0.9rem;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .header-links a {
-  color: var(--text);
+  color: var(--text-light);
   text-decoration: none;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 2px;
-  transition: border-color 0.2s, color 0.2s;
+  transition: color 0.3s ease;
 }
 
 .header-links a:hover {
   color: var(--accent);
-  border-color: var(--accent);
 }
 
 .resume-dl {
-  font-weight: 500;
+  color: var(--text) !important;
 }
 
 .section {
@@ -96,14 +94,14 @@ body {
 .section-heading {
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--text-muted);
-  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  font-weight: 500;
   margin: 0;
 }
 
 .bio {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: var(--text);
   font-weight: 400;
@@ -112,24 +110,24 @@ body {
 .bio em {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  color: #000;
-  font-weight: 600;
+  font-weight: 500;
+  color: #111;
 }
 
 /* Experience */
-.exp-item {
+.exp-item, .proj-item {
   margin-bottom: 2.5rem;
 }
 
-.exp-item:last-child {
+.exp-item:last-child, .proj-item:last-child {
   margin-bottom: 0;
 }
 
-.exp-header {
+.exp-header, .proj-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 @media (max-width: 500px) {
@@ -138,68 +136,47 @@ body {
   }
 }
 
-.exp-role {
-  font-weight: 600;
-  color: #000;
-  font-size: 1.05rem;
-}
-
-.exp-meta {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.exp-item p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* Projects */
-.proj-item {
-  margin-bottom: 2.5rem;
-}
-
-.proj-item:last-child {
-  margin-bottom: 0;
-}
-
-.proj-header {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 0.5rem;
+.exp-role, .proj-title {
+  font-weight: 500;
+  color: #111;
+  font-size: 1.1rem;
 }
 
 .proj-title {
   font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: #000;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.exp-meta {
+  font-size: 0.85rem;
+  color: var(--text-light);
 }
 
 .proj-badge {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0.6rem;
   background: var(--border);
   border-radius: 4px;
   color: var(--text-muted);
-  font-weight: 600;
+  font-weight: 500;
+  margin-left: 0.8rem;
+  vertical-align: middle;
 }
 
-.proj-item p {
+.exp-item p, .proj-item p {
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 0.5rem;
 }
 
 .proj-tech {
-  font-family: monospace;
+  margin-top: 0.5rem;
+  font-family: 'Inter', sans-serif !important;
   font-size: 0.8rem !important;
-  color: #888 !important;
+  color: var(--text-light) !important;
 }
 
 /* Footer */
@@ -214,13 +191,13 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--text-light);
 }
 
 .return-link {
-  color: var(--text);
+  color: var(--text-muted);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   transition: color 0.2s;
 }
 

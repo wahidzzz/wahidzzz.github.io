@@ -230,8 +230,15 @@ ul{list-style:none}/* CSS BACKGROUND */
 .consulting-bg-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--font-d);font-size:clamp(8rem, 25vw, 30rem);font-weight:900;color:rgba(255,45,85,0.02);pointer-events:none;white-space:nowrap;z-index:0}
 .consulting-header{margin-bottom:6rem;position:relative;z-index:1}
 .consulting-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem;position:relative;z-index:1}
-.consulting-card{padding:4rem 3rem;border:1px solid rgba(255,45,85,0.1);background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);border-radius:12px;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);box-shadow:0 10px 40px rgba(0,0,0,0.5)}
-.consulting-card:hover{transform:translateY(-15px) scale(1.02);background:rgba(255,45,85,0.05);border-color:rgba(255,45,85,0.5);box-shadow:0 20px 60px rgba(255,45,85,0.1)}
+.consulting-card{padding:4rem 3rem;border:2px dashed rgba(255,45,85,0.2);background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);border-radius:12px;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);box-shadow: 8px 8px 0 rgba(255,45,85,0.1)}
+.consulting-card:nth-child(1) { transform: rotate(-1.5deg); }
+.consulting-card:nth-child(2) { transform: rotate(1.5deg); border-style: dotted; border-radius: 20px 5px 20px 5px; }
+.consulting-card:nth-child(3) { transform: rotate(-0.5deg); border-style: solid; border-width: 1px 4px 4px 1px; }
+.consulting-card:hover{transform:translateY(-15px) scale(1.02) rotate(0deg) !important;background:rgba(255,45,85,0.05);border-color:rgba(255,45,85,0.8);box-shadow:-8px 12px 0 rgba(255,45,85,0.2)}
+@keyframes iconFloat { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-10px) rotate(5deg); } }
+.consulting-icon svg { animation: iconFloat 4s ease-in-out infinite; }
+.consulting-card:nth-child(2) .consulting-icon svg { animation-delay: -1.5s; }
+.consulting-card:nth-child(3) .consulting-icon svg { animation-delay: -3s; }
 .consulting-icon{font-size:3rem;margin-bottom:2rem}
 .consulting-card h3{font-size:1.8rem;margin-bottom:1rem;color:var(--red)}
 .consulting-card p{color:var(--muted);line-height:1.6;font-size:1.1rem}
