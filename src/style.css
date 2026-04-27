@@ -205,7 +205,10 @@ ul{list-style:none}/* CSS BACKGROUND */
 #minigame-section{padding:10rem 5vw;display:flex;justify-content:center;position:relative;overflow:hidden}
 .minigame-wrapper{position:relative;width:100%;max-width:1000px;margin:0 auto}
 .bg-huge-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:clamp(4rem, 15vw, 15rem);font-family:var(--font-d);font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(100, 255, 218, 0.15);z-index:-1;white-space:nowrap;pointer-events:none}
-.minigame-container{width:100%;border:1px solid rgba(255,255,255,0.05);background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);border-radius:12px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.5)}
+.minigame-container{position:relative;width:100%;height:400px;border:1px solid rgba(255,255,255,0.05);background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);border-radius:12px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.5)}
+#game-overlay{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:10;pointer-events:none;background:rgba(0,0,0,0.2)}
+#game-overlay h3{font-family:var(--font-d);font-size:clamp(1.5rem,3vw,2.5rem);color:var(--red);margin-bottom:.5rem;letter-spacing:.05em}
+#game-overlay p{font-family:var(--font-m);color:var(--muted);font-size:.9rem;text-transform:uppercase}
 #game-canvas{width:100%;height:400px;display:block;cursor:crosshair}
 
 /* WORK HORIZONTAL */
@@ -292,6 +295,10 @@ ul{list-style:none}/* CSS BACKGROUND */
   .project{grid-template-columns:1fr}
   .project-num{display:none}
   .proj-row{grid-template-columns:1fr}
+  .project-card{width:90vw;height:auto;min-height:50vh;padding:1.8rem}
+  .project-title{font-size:2rem;margin:0.5rem 0}
+  .project-desc{max-width:100%;font-size:0.9rem}
+  .project-visual{opacity:0.05}
   .contact-bento{grid-template-columns:1fr}
   .bento-email{grid-column:span 1}
   #custom-cursor{display:none}

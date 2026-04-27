@@ -186,6 +186,9 @@ export function initMiniGame() {
 
   // Interaction to start/reboot
   canvas.addEventListener('click', () => {
+    const overlay = document.getElementById('game-overlay');
+    if (overlay) overlay.style.display = 'none';
+
     if (!gameRunning || isGameOver) {
       // Reset state
       paddle.x = canvas.width / 2 - 50;
@@ -201,9 +204,6 @@ export function initMiniGame() {
     }
   });
 
-  // Start screen
+  // Start screen clears canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  const startTitleSize = canvas.width < 500 ? '18px' : '24px';
-  drawText("INTERACTIVE TERMINAL", canvas.width/2, canvas.height/2 - 20, startTitleSize);
-  drawText("Tap to Initiate System Breaker", canvas.width/2, canvas.height/2 + 20, '14px');
 }
