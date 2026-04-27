@@ -171,22 +171,30 @@ document.addEventListener('DOMContentLoaded', () => {
     animateGlow();
   }
   
+  // Initialize preloader first to ensure it's running
+  initPreloader();
+  
   // Initialize floating 3D shapes
-  initThreeScene();
+  try {
+    initThreeScene();
+  } catch (err) {
+    console.error("Three.js initialization failed:", err);
+  }
   
   // Initialize minigame
-  initMiniGame();
+  try {
+    initMiniGame();
+  } catch (err) {
+    console.error("Minigame initialization failed:", err);
+  }
   
-  // Initialize horizontal scroll for projects
-  initReveal();
-  initTextReveal();
-  initHorizontalScroll();
-  
-  initPreloader();
+  // Initialize other components
   initCursor();
   initScrollProgress();
   initNav();
   initReveal();
+  initTextReveal();
+  initHorizontalScroll();
   initTilt();
   initNeural();
 });

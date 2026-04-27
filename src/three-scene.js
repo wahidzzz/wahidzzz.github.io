@@ -1,7 +1,13 @@
 import * as THREE from 'three';
 
 export function initThreeScene() {
-  // Check if canvas already exists, if not create it
+  // Cleanup existing renderer if any
+  if (window._threeRenderer) {
+    window._threeRenderer.dispose();
+    const gl = window._threeRenderer.getContext();
+    if (gl) gl.getExtension('WEBGL_lose_context')?.loseContext();
+  }
+
   let canvas = document.getElementById('three-canvas');
   if (!canvas) {
     canvas = document.createElement('canvas');
@@ -9,12 +15,19 @@ export function initThreeScene() {
     document.body.prepend(canvas);
   }
 
-  const scene = new THREE.Scene();
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    window._threeRenderer = renderer;
+  } catch (e) {
+    console.error("WebGL context creation failed:", e);
+    canvas.style.display = 'none';
+    return;
+  }
 
+  const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
   camera.position.set(0, 0, 10);
-
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 
