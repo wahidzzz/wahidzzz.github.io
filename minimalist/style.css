@@ -146,6 +146,13 @@ body {
   font-weight: 500;
   color: #111;
   font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.proj-title:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 
 .proj-title {
